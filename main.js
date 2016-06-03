@@ -18,17 +18,19 @@ firstReverse('Brian') // yields 'nairB'
 // should be "hELLO wORLD". Let numbers and symbols stay the way they are.
 
 function snapCase(inputStr){
-    var newStr = ''
+    var newStr = inputStr.split('')
     
     for (var i=0; i < inputStr.length; i++){
-        if(inputStr.charAt[i] == inputStr.charAt[i].isUpperCase()){
-            newStr += inputStr.charAt[i].isLowerCase()
+        if(newStr[i] == newStr[i].toUpperCase()){
+            newStr[i] = newStr[i].toLowerCase()
         }
-        else if(inputStr.charAt[i] == inputStr.charAt[i].isLowerCase()){
-            newStr = inputStr.charAt[i].isUpperCase()
+        else if(newStr[i] == newStr[i].toLowerCase()){
+            newStr[i] = newStr[i].toUpperCase()
+            }
         }
-        return newStr
+        return inputStr = newStr.join('')
     }
-}
+    
+snapCase('Hello World') // yields 'hELLO wORLD'
 
-snapCase('Hello World')
+
